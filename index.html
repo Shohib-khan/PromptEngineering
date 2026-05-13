@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gen AI Engineer Roadmap</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="progress-bar" id="progressBar"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="Gen AI roadmap home">
+      <span class="brand-mark">AI</span>
+      <span>SwitchToGenAI</span>
+    </a>
+    <nav class="desktop-nav" aria-label="Primary navigation">
+      <a href="#roadmap">Roadmap</a>
+      <a href="#projects">Projects</a>
+      <a href="#stack">Tech Stack</a>
+      <a href="#interview">Interview</a>
+    </nav>
+    <button class="menu-button" id="menuButton" aria-label="Open menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <aside class="sidebar" id="sidebar" aria-label="Roadmap sidebar">
+    <div class="sidebar-head">
+      <strong>Learning Path</strong>
+      <button id="closeSidebar" aria-label="Close menu">x</button>
+    </div>
+    <a href="#phase-1">1. Mindset and Setup</a>
+    <a href="#phase-2">2. Python and Data</a>
+    <a href="#phase-3">3. ML Foundations</a>
+    <a href="#phase-4">4. NLP and LLMs</a>
+    <a href="#phase-5">5. Prompt Engineering</a>
+    <a href="#phase-6">6. RAG Systems</a>
+    <a href="#phase-7">7. Agents and Tools</a>
+    <a href="#phase-8">8. Production AI</a>
+    <a href="#phase-9">9. Portfolio</a>
+    <a href="#phase-10">10. Job Switch</a>
+  </aside>
+  <div class="overlay" id="overlay"></div>
+
+  <main>
+    <section class="hero section" id="home">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">Career switch roadmap for 5+ years experienced non-tech professionals</p>
+        <h1>Become a job-ready Gen AI Engineer without wasting your industry experience.</h1>
+        <p class="hero-text">
+          A practical 9-12 month path from absolute technical basics to production-grade LLM apps, RAG, agents,
+          deployment, portfolio, and interview preparation.
+        </p>
+        <div class="hero-actions">
+          <a class="primary-btn" href="#roadmap">Start Roadmap</a>
+          <a class="secondary-btn" href="#projects">Build Portfolio</a>
+        </div>
+      </div>
+      <div class="hero-panel reveal">
+        <div class="orbit">
+          <span></span>
+          <span></span>
+          <span></span>
+          <div class="core">LLM</div>
+        </div>
+        <div class="metric-grid">
+          <article>
+            <strong>40 weeks</strong>
+            <span>Realistic transition plan</span>
+          </article>
+          <article>
+            <strong>8 projects</strong>
+            <span>Portfolio-ready builds</span>
+          </article>
+          <article>
+            <strong>3 roles</strong>
+            <span>Engineer, RAG, AI app dev</span>
+          </article>
+          <article>
+            <strong>1 goal</strong>
+            <span>Crack a Gen AI role</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section intro">
+      <div class="section-title reveal">
+        <p class="eyebrow">Start from your advantage</p>
+        <h2>Your non-tech experience is not a weakness.</h2>
+      </div>
+      <div class="intro-grid">
+        <article class="info-card reveal">
+          <span class="card-icon">01</span>
+          <h3>Domain knowledge</h3>
+          <p>Use your existing business, operations, finance, HR, sales, support, or manufacturing experience to solve real AI use cases.</p>
+        </article>
+        <article class="info-card reveal">
+          <span class="card-icon">02</span>
+          <h3>System thinking</h3>
+          <p>Gen AI roles need people who understand workflows, risks, users, compliance, and measurable business outcomes.</p>
+        </article>
+        <article class="info-card reveal">
+          <span class="card-icon">03</span>
+          <h3>Build proof</h3>
+          <p>You will not win by certificates alone. You win by showing working apps, clean code, evaluations, and deployment links.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section controls" id="roadmap">
+      <div class="section-title reveal">
+        <p class="eyebrow">Roadmap</p>
+        <h2>Topic-wise path from beginner to advanced.</h2>
+      </div>
+      <div class="filter-panel reveal">
+        <button class="filter active" data-filter="all">All</button>
+        <button class="filter" data-filter="foundation">Foundation</button>
+        <button class="filter" data-filter="build">Build</button>
+        <button class="filter" data-filter="advanced">Advanced</button>
+        <button class="filter" data-filter="career">Career</button>
+      </div>
+      <div class="tracker reveal" aria-live="polite">
+        <div>
+          <strong id="completedCount">0 of 10 phases complete</strong>
+          <span>Track your switch journey in this browser.</span>
+        </div>
+        <div class="tracker-rail"><span id="trackerFill"></span></div>
+      </div>
+    </section>
+
+    <section class="roadmap">
+      <article class="phase reveal" id="phase-1" data-track="foundation">
+        <div class="phase-meta"><span>Weeks 1-2</span><strong>Foundation</strong></div>
+        <div class="phase-content">
+          <h3>Mindset, setup, and AI literacy</h3>
+          <p>Understand what Gen AI engineers actually do: build useful software around models, data, tools, workflows, and evaluation.</p>
+          <ul>
+            <li>Install VS Code, Git, Python, Node.js, and create GitHub profile.</li>
+            <li>Learn terminal basics, folders, virtual environments, APIs, JSON, HTTP, and environment variables.</li>
+            <li>Study AI terms: model, token, context window, embedding, vector database, hallucination, latency, cost.</li>
+            <li>Daily task: read one AI product case study and rewrite it as a business workflow.</li>
+          </ul>
+          <button class="complete-btn" data-phase="phase-1">Mark complete</button>
+          <button class="expand-btn">View deliverable</button>
+          <div class="deliverable">Deliverable: a GitHub repo named <code>gen-ai-learning-log</code> with daily notes, setup screenshots, and a simple API call script.</div>
+        </div>
+      </article>
+
+      <article class="phase reveal" id="phase-2" data-track="foundation">
+        <div class="phase-meta"><span>Weeks 3-8</span><strong>Foundation</strong></div>
+        <div class="phase-content">
+          <h3>Python, data handling, and software basics</h3>
+          <p>Become comfortable enough to build backend logic without copying every line. This is where career switchers must slow down and get solid.</p>
+          <ul>
+            <li>Python: variables, functions, classes, file handling, exceptions, list/dict comprehensions.</li>
+            <li>Data: pandas, CSV/Excel/JSON, text cleaning, basic SQL joins, aggregation, and filtering.</li>
+            <li>Software: Git branches, README files, modular code, logging, config files, and basic tests.</li>
+            <li>Mini builds: resume parser, invoice extractor, FAQ cleaner, CSV insight generator.</li>
+          </ul>
+          <button class="complete-btn" data-phase="phase-2">Mark complete</button>
+          <button class="expand-btn">View deliverable</button>
+          <div class="deliverable">Deliverable: a command-line Python app that reads business documents and produces structured JSON output.</div>
+        </div>
+      </article>
+
+      <article class="phase reveal" id="phase-3" data-track="foundation">
+        <div class="phase-meta"><span>Weeks 9-12</span><strong>Foundation</strong></div>
+        <div class="phase-content">
+          <h3>Machine learning basics without drowning in math</h3>
+          <p>You do not need to become a research scientist first, but you must understand enough ML to reason about data, metrics, and model behavior.</p>
+          <ul>
+            <li>Core ideas: train/test split, features, labels, overfitting, classification, regression, clustering.</li>
+            <li>Metrics: accuracy, precision, recall, F1, confusion matrix, ROC basics.</li>
+            <li>Practice: scikit-learn pipelines and model comparison on tabular datasets.</li>
+            <li>AI judgment: when not to use Gen AI, when rules or classic ML are better.</li>
+          </ul>
+          <button class="complete-btn" data-phase="phase-3">Mark complete</button>
+          <button class="expand-btn">View deliverable</button>
+          <div class="deliverable">Deliverable: a notebook explaining a business prediction model in simple language with metrics and limitations.</div>
+        </div>
+      </article>
+
+      <article class="phase reveal" id="phase-4" data-track="build">
+        <div class="phase-meta"><span>Weeks 13-17</span><strong>Build</strong></div>
+        <div class="phase-content">
+          <h3>NLP and LLM fundamentals</h3>
+          <p>Learn how text becomes model input, how transformers changed NLP, and how modern LLM APIs are used in applications.</p>
+          <ul>
+            <li>NLP: tokenization, stemming, lemmatization, embeddings, semantic similarity, chunking.</li>
+            <li>LLMs: transformer intuition, attention, pretraining, instruction tuning, RLHF, model limitations.</li>
+            <li>APIs: chat completion patterns, streaming responses, structured outputs, function calling basics.</li>
+            <li>Practice: summarizer, sentiment analyzer, meeting notes generator, customer email classifier.</li>
+          </ul>
+          <button class="complete-btn" data-phase="phase-4">Mark complete</button>
+          <button class="expand-btn">View deliverable</button>
+          <div class="deliverable">Deliverable: a small web app that accepts long text and returns summary, key decisions, action items, and risks.</div>
+        </div>
+      </article>
+
+      <article class="phase reveal" id="phase-5" data-track="build">
+        <div class="phase-meta"><span>Weeks 18-20</span><strong>Build</strong></div>
+        <div class="phase-content">
+          <h3>Prompt engineering and evaluation</h3>
+          <p>Prompting is not magic wording. It is task design, context design, output contracts, tests, and iteration.</p>
+          <ul>
+            <li>Patterns: role, context, examples, constraints, rubrics, chain-of-thought alternatives, self-checking.</li>
+            <li>Output control: JSON schemas, validation, retry logic, guardrails, refusal handling.</li>
+            <li>Evaluation: golden datasets, human review, consistency tests, hallucination checks, cost tracking.</li>
+            <li>Practice: create 30 prompts for one business domain and measure output quality.</li>
+          </ul>
+          <button class="complete-btn" data-phase="phase-5">Mark complete</button>
+          <button class="expand-btn">View deliverable</button>
+          <div class="deliverable">Deliverable: prompt evaluation dashboard showing pass/fail cases, score reasons, latency, and cost.</div>
+        </div>
+      </article>
+
+      <article class="phase reveal" id="phase-6" data-track="advanced">
+        <div class="phase-meta"><span>Weeks 21-28</span><strong>Advanced</strong></div>
+        <div class="phase-content">
+          <h3>RAG: retrieval augmented generation</h3>
+          <p>This is one of the most employable Gen AI skills. Learn to connect private knowledge to LLMs reliably.</p>
+          <ul>
+            <li>Ingestion: document loaders, chunking strategy, metadata, deduplication, cleaning.</li>
+            <li>Retrieval: embeddings, vector search, hybrid search, reranking, query rewriting.</li>
+            <li>Generation: citations, answer grounding, fallback responses, context compression.</li>
+            <li>Evaluation: retrieval precision, answer faithfulness, source coverage, regression tests.</li>
+          </ul>
+          <button class="complete-btn" data-phase="phase-6">Mark complete</button>
+          <button class="expand-btn">View deliverable</button>
+          <div class="deliverable">Deliverable: a production-style policy/document assistant with citations, upload flow, and evaluation report.</div>
+        </div>
+      </article>
+
+      <article class="phase reveal" id="phase-7" data-track="advanced">
+        <div class="phase-meta"><span>Weeks 29-32</span><strong>Advanced</strong></div>
+        <div class="phase-content">
+          <h3>Agents, tools, and workflow automation</h3>
+          <p>Agents are useful when they can plan, call tools, observe results, and recover. Learn the engineering discipline behind them.</p>
+          <ul>
+            <li>Tool calling: database lookup, email draft, CRM update, web search, calculator, file operations.</li>
+            <li>Patterns: planner-executor, router, evaluator-optimizer, human-in-the-loop approvals.</li>
+            <li>Safety: permissions, audit logs, sandboxing, rate limits, and rollback paths.</li>
+            <li>Practice: automate one real workflow from your old industry experience.</li>
+          </ul>
+          <button class="complete-btn" data-phase="phase-7">Mark complete</button>
+          <button class="expand-btn">View deliverable</button>
+          <div class="deliverable">Deliverable: an agentic workflow that researches a customer issue, drafts a response, and asks for approval before action.</div>
+        </div>
+      </article>
+
+      <article class="phase reveal" id="phase-8" data-track="advanced">
+        <div class="phase-meta"><span>Weeks 33-36</span><strong>Advanced</strong></div>
+        <div class="phase-content">
+          <h3>Production Gen AI engineering</h3>
+          <p>Hiring teams care whether your app survives real users, bad inputs, changing data, and cost pressure.</p>
+          <ul>
+            <li>Backend: FastAPI or Node.js, auth basics, queues, caching, background jobs.</li>
+            <li>Deployment: Docker basics, environment secrets, cloud deploy, monitoring, logs.</li>
+            <li>Quality: unit tests, integration tests, eval tests, red-team prompts, observability.</li>
+            <li>Responsible AI: privacy, PII handling, explainability, model risk, legal escalation.</li>
+          </ul>
+          <button class="complete-btn" data-phase="phase-8">Mark complete</button>
+          <button class="expand-btn">View deliverable</button>
+          <div class="deliverable">Deliverable: deploy one Gen AI app publicly with README, architecture diagram, test results, and demo video.</div>
+        </div>
+      </article>
+
+      <article class="phase reveal" id="phase-9" data-track="career">
+        <div class="phase-meta"><span>Weeks 37-39</span><strong>Career</strong></div>
+        <div class="phase-content">
+          <h3>Portfolio that proves employability</h3>
+          <p>Your portfolio should feel like work you could do on Monday morning for a company, not toy demos only.</p>
+          <ul>
+            <li>Project 1: domain-specific RAG assistant with citations and evals.</li>
+            <li>Project 2: AI workflow automation with tool calls and approval gates.</li>
+            <li>Project 3: structured extraction app for invoices, resumes, claims, or support tickets.</li>
+            <li>Project 4: analytics assistant that answers business questions from SQL or CSV data.</li>
+          </ul>
+          <button class="complete-btn" data-phase="phase-9">Mark complete</button>
+          <button class="expand-btn">View deliverable</button>
+          <div class="deliverable">Deliverable: portfolio site with live demos, GitHub links, architecture notes, business value, and limitations.</div>
+        </div>
+      </article>
+
+      <article class="phase reveal" id="phase-10" data-track="career">
+        <div class="phase-meta"><span>Week 40+</span><strong>Career</strong></div>
+        <div class="phase-content">
+          <h3>Crack Gen AI interviews and make the switch</h3>
+          <p>Position yourself as a domain-aware AI application engineer, not as someone merely following tutorials.</p>
+          <ul>
+            <li>Resume: translate old experience into AI workflows, automation, metrics, and user impact.</li>
+            <li>Interview: explain RAG, embeddings, chunking, hallucination mitigation, model selection, and eval design.</li>
+            <li>System design: design an enterprise knowledge assistant, ticket triage bot, or AI analyst.</li>
+            <li>Job strategy: target Gen AI engineer, AI application developer, RAG engineer, prompt/evaluation engineer.</li>
+          </ul>
+          <button class="complete-btn" data-phase="phase-10">Mark complete</button>
+          <button class="expand-btn">View deliverable</button>
+          <div class="deliverable">Deliverable: 2-minute project pitch, 6 STAR stories, 50 interview answers, and weekly application tracker.</div>
+        </div>
+      </article>
+    </section>
+
+    <section class="section project-zone" id="projects">
+      <div class="section-title reveal">
+        <p class="eyebrow">Portfolio Projects</p>
+        <h2>Build these to become interview-ready.</h2>
+      </div>
+      <div class="project-grid">
+        <article class="project-card reveal"><h3>Company Policy RAG Bot</h3><p>Upload PDFs, retrieve trusted chunks, answer with citations, and show confidence signals.</p><span>RAG + evals</span></article>
+        <article class="project-card reveal"><h3>AI Support Triage</h3><p>Classify tickets, summarize context, draft replies, and route severe cases to humans.</p><span>Agents + tools</span></article>
+        <article class="project-card reveal"><h3>Invoice Intelligence</h3><p>Extract fields, validate totals, detect missing data, and export structured JSON/CSV.</p><span>LLM extraction</span></article>
+        <article class="project-card reveal"><h3>Business Data Analyst</h3><p>Ask questions over CSV/SQL, generate charts, explain trends, and prevent unsafe queries.</p><span>Data + AI</span></article>
+      </div>
+    </section>
+
+    <section class="section stack" id="stack">
+      <div class="section-title reveal">
+        <p class="eyebrow">Tools</p>
+        <h2>Practical stack to learn.</h2>
+      </div>
+      <div class="stack-cloud reveal">
+        <span>Python</span><span>FastAPI</span><span>JavaScript</span><span>React basics</span><span>SQL</span><span>Pandas</span>
+        <span>OpenAI APIs</span><span>LangChain</span><span>LlamaIndex</span><span>Vector DB</span><span>Docker</span>
+        <span>GitHub</span><span>Cloud Deploy</span><span>Monitoring</span><span>Evaluation</span>
+      </div>
+    </section>
+
+    <section class="section interview" id="interview">
+      <div class="section-title reveal">
+        <p class="eyebrow">Interview Prep</p>
+        <h2>What you must be able to explain.</h2>
+      </div>
+      <div class="accordion reveal">
+        <button class="accordion-btn">How would you design a RAG system for HR policies?</button>
+        <div class="accordion-panel">Discuss ingestion, chunking, metadata, vector search, reranking, citations, access control, evaluations, and failure handling.</div>
+        <button class="accordion-btn">How do you reduce hallucinations?</button>
+        <div class="accordion-panel">Use grounded context, citations, refusal rules, retrieval quality checks, structured outputs, eval datasets, and human review for risky flows.</div>
+        <button class="accordion-btn">How do you choose between model providers?</button>
+        <div class="accordion-panel">Compare quality, latency, cost, context size, tool support, privacy needs, reliability, and operational constraints.</div>
+        <button class="accordion-btn">Why should a company hire you from a non-tech background?</button>
+        <div class="accordion-panel">Your answer: I bring domain workflow knowledge plus working AI engineering proof: deployed apps, evals, clean repos, and business impact thinking.</div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div>
+      <strong>SwitchToGenAI</strong>
+      <p>Learn, build, evaluate, deploy, and interview with proof.</p>
+    </div>
+    <a href="#home">Back to top</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
